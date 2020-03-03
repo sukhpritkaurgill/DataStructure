@@ -1,0 +1,38 @@
+using System;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+        class FileHandler
+        {
+            public void InputTextFile()
+            {
+                int counter = 0;
+                string line;
+
+                System.IO.StreamReader file =
+                    new
+                 System.IO.StreamReader(@"C:\Users\HP\Dropbox\Academic_Desk\2020.01.Winter\Days_Database\2020.03.03\CSD3354_1\AJAX.csv"
+                        );
+                while ((line = file.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                    counter++;
+                    Console.WriteLine("line number {0}", counter);
+
+
+
+                }
+                file.Close();
+                System.Console.WriteLine("There were {0} lines", counter);
+                System.Console.ReadLine();
+            }
+        }
+
+    }
+}
